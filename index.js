@@ -1,6 +1,7 @@
 // Importing the Express framework using ES Modules syntax
 // This line imports the 'express' library, which is a minimal and flexible Node.js web application framework
 import express from "express";
+import 'dotenv/config'
 
 // Creating an Express application instance
 // 'app' is the main object that will be used to define routes, middleware, and start the server
@@ -8,7 +9,7 @@ const app = express();
 
 // Defining the port number where the server will run
 // This is the port the server will listen on (http://localhost:3000)
-const port = 3000;
+const port = process.env.port||3000;
 
 // Using express.json() middleware to parse incoming JSON request bodies
 // This middleware parses incoming requests with JSON payloads and makes the data available in req.body
